@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalicheemala Family Invites You</title>
+    <!-- Google Fonts for Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #800020; /* Deep Burgundy/Maroon */
+            --secondary-color: #b38f4d; /* Elegant Gold */
+            --text-dark: #333333;
+            --text-light: #f9f9f9;
+            --bg-cream: #fffdf9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Music Toggle Button */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(128, 0, 32, 0.85);
+            color: white;
+            border: 1px solid var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .music-control:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        /* Hero Header Section */
+        header {
+            padding: 60px 20px 30px 20px; 
+            background: linear-gradient(rgba(255,253,249,0.9), rgba(255,253,249,0.9)), url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .invitation-text {
+            max-width: 650px;
+            margin: 0 auto 20px auto;
+            font-size: 1.1rem;
+        }
+
+        .parents-names {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .couple-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 15px;
+        }
+
+        .small-text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        /* Countdown Timer */
+        .countdown-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+            margin: 0 0 40px 0; 
+        }
+
+        .countdown-container h3 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .time-box {
+            min-width: 70px;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 600;
+            font-family: 'Cinzel', serif;
+            color: var(--secondary-color);
+        }
+
+        .time-box label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Event Details / Schedule */
+        .details-section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            background: white;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .event-card h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .time {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 10px 0;
+        }
+
+        .venue {
+            margin-top: 15px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .map-container {
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eaeaea;
+        }
+
+        /* Action Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        .btn-secondary:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        /* Our Story Section */
+        .story-section {
+            padding: 60px 20px;
+            background-color: #fdfaf4;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .story-section h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .story-content {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #555;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        footer {
+            padding: 30px;
+            background-color: #111;
+            color: #ddd;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        
+        footer .compliments {
+            font-family: 'Cinzel', serif;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 3.5rem; }
+            .couple-name { font-size: 1.4rem; }
+            .countdown { gap: 10px; }
+            .time-box span { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music Element (Controls Hidden YouTube Player) -->
+    <button class="music-control" id="musicBtn" onclick="toggleMusic()">🎵 Music ON</button>
+    <div id="youtubePlayer" style="display: none;"></div>
+
+    <!-- Header / Invitation Main Page -->
+    <header>
+        <h2>Chalicheemala Family Invites You</h2>
+        
+        <p class="invitation-text">
+            <span class="parents-names">Smt. C. Indira & Sri C. Prabhakar Naidu</span><br>
+            <span class="small-text">Ananthappa Naidu Kandriga, Nagari Mandal, Chittoor Dist.</span>
+        </p>
+
+        <p class="invitation-text" style="font-style: italic;">
+            We solicit your gracious presence along with your family and friends on the auspicious occasion of the marriage of our only son
+        </p>
+        
+        <h3 class="couple-name">Chi. C.Ranjith, M.B.A.</h3>
+        <p class="small-text">
+            (Grandson of Late Smt. C. Rajamma & Late Sri. C. Govinda Swamy Naidu)
+        </p>
+        
+        <p style="margin: 15px 0; font-family: 'Great Vibes'; font-size: 2rem; color: var(--secondary-color);">with</p>
+        
+        <h3 class="couple-name">Chi.La.Sou. K. Swetha, M.B.A.</h3>
+        <p class="small-text">
+            (Elder Daughter of Smt. K. Santhi & Sri K. Nageswara Rao,<br>
+            Kammavari Palem, Uthukotta Taluka, Tiruvalluru Dist, T.N.)
+        </p>
+    </header>
+
+    <!-- Countdown Timer Section -->
+    <div class="countdown-container">
+        <h3>Counting Down To The Big Day</h3>
+        <div class="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <label>Days</label>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <label>Hours</label>
+            </div>
+            <div class="time-box">
+                <span id="mins">00</span>
+                <label>Mins</label>
+            </div>
+            <div class="time-box">
+                <span id="secs">00</span>
+                <label>Secs</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Details Section -->
+    <div class="details-section">
+        
+        <!-- Reception Card -->
+        <div class="event-card">
+            <h4>Reception & Dinner</h4>
+            <p class="time">Saturday, 04 July 2026</p>
+            <p style="font-weight: 500;">From 7:00 PM onwards</p>
+            
+            <div class="btn-group">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ranjith+%26+Swetha+-+Wedding+Reception&dates=20260704T133000Z/20260704T173000Z&details=Join+us+for+dinner+and+celebration!&location=S.S.+Kalyanamandapam,+Srikalahasti" target="_blank" class="btn btn-secondary">Add to Calendar</a>
+            </div>
+        </div>
+
+        <!-- Muhurtham Card -->
+        <div class="event-card">
+            <h4>Sumuhurtham</h4>
+            <p class="time">Sunday, 05 July 2026</p>
+            <p style="font-weight: 500;">Between 5:00 AM to 6:30 AM <br>(Midhuna Lagnam)</p>
+            
+            <p class="venue">
+                <strong>Venue:</strong><br>
+                S.S. Kalyanamandapam,<br>
+                Srikalahasti
+            </p>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.077839567431!2d79.88115378749644!3d14.537540087518055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c922a8a8209b3%3A0x8a1a4e32b6e4c59e!2sS%20S%20Kalyana%20Mandapam!5e0!3m2!1sen!2sca!4v1780816205100!5m2!1sen!2sca" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="btn-group">
+                <a href="https://maps.app.goo.gl/YourGoogleMapsLinkHere" target="_blank" class="btn">Get Directions</a>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ranjith+%26+Swetha+-+Wedding+Muhurtham&dates=20260704T233000Z/20260705T010000Z&details=We+solicit+your+gracious+presence+at+our+wedding+Sumuhurtham!&location=S.S.+Kalyanamandapam,+Srikalahasti" target="_blank" class="btn btn-secondary">Add to Calendar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <div class="story-section">
+        <h3>Our Story</h3>
+        <div class="story-content">
+            <p>Some stories do not begin with grand proposals or dramatic moments. Some begin quietly... with simple conversations, small care, and genuine concern.</p>
+            <br>
+            <p>From those little moments, a bond slowly grew. What started as casual conversations became the foundation of our lifetime journey together.</p>
+        </div>
+        
+        <div class="btn-group" style="margin-top: 30px;">
+            <button class="btn" onclick="alert('Thank you for your blessings!')">Send Blessings</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>With best compliments from:</p>
+        <p class="compliments">Smt. Aaduri Ramya & Sri Aaduri Bharath,<br>Family & Friends</p>
+    </footer>
+
+    <script>
+        // --- Countdown Timer Logic ---
+        const weddingDate = new Date("July 05, 2026 05:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("mins").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("secs").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("mins").innerHTML = "00";
+                document.getElementById("secs").innerHTML = "00";
+            }
+        }, 1000);
+
+        // --- YouTube API Audio Logic ---
+        let player;
+        let isPlaying = false;
+        const musicBtn = document.getElementById("musicBtn");
+
+        // 1. Load the YouTube IFrame Player API code asynchronously
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 2. Creates an <iframe> (and YouTube player) after the API code downloads
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtubePlayer', {
+                height: '0',
+                width: '0',
+                videoId: '-Bf-G6nOESc', // Extracted from your provided link
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'playsinline': 1,
+                    'loop': 1,
+                    'playlist': '-Bf-G6nOESc' // Needed for the loop to work
+                }
+            });
+        }
+
+        // 3. Connects the existing button to the YouTube player
+        function toggleMusic() {
+            // Check if player is loaded before trying to play
+            if (player && typeof player.playVideo === 'function') {
+                if (!isPlaying) {
+                    player.playVideo();
+                    musicBtn.innerHTML = "🎵 Music OFF";
+                    isPlaying = true;
+                } else {
+                    player.pauseVideo();
+                    musicBtn.innerHTML = "🎵 Music ON";
+                    isPlaying = false;
+                }
+            } else {
+                console.log("Audio player is still loading. Please try again in a second.");
+            }
+        }
+    </script>
+</body>
+</html>
